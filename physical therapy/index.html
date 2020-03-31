@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--Drawing with JS
+By, Tina Li
+Date: 11/28/2018
+-->
+<html>
+	<head>
+	<title>University of Hartford Physical Therapy Simulation</title>
+	<meta charset = "utf-9">
+	<link href="styles\normal.css" rel="stylesheet">
+	</head>
+	<style>
+			body		{
+						 background-image: url(images/back.jpg);
+						 background-size: 50%;
+						 background-repeat: repeat;}
+	</style>
+	
+	
+	<body>
+	<div id="wrapper">
+		<header><center><h2>Interactive Simulations of the Human Body</center></h2></header>
+		<h1 align=center>Back and Arm Simulation</h1>
+		<br>
+		<nav>
+		
+					
+			</nav>
+		<p align=center><img src="images/Therapy.png" alt="Picture" height="350" width="500"id="mainpic" /></p>
+	<br>
+	
+	<div  align=center>In the Free body diagram, <br>
+		point “K” represents the lower end of the spinal column, <br>
+		point “J” represents the center of gravity (cg) of the trunk, neck and head, <br>
+		point “F” represents the insertion point of the erector spinae muscle, <br>
+		point “G” represents the upper end of the spinal column (shoulder), <br>
+		point “H” represents the cg of the arms and hands,  <br>
+		and point “P” represents where the load is being held by the hands.<br>
+		F represents force; W represents weight.<br>
+		TNH represents the trunk, head, and neck of a person, 54.5% of total weight.<br>		
+		AH represents the two arms and hands of the person, 10.6% of total weight.<br>
+		ES represents erector spinae muscle,<br>
+		JRF represents joint reaction force.<br>
+
+		</div>
+	<form id=order name=order>
+	<p align=center>Please enter the level arm of the trunk, head, and neck of a person. 
+	<br>
+	LA TNH: <input type="text" name="porkQty" size="2" value="0" onmouseover= "porkImage()" onmouseout= "document.getElementById('mainpic').src='images/Therapy.png'">
+	<br>
+
+	<p align=center>Please enter the level arm of weight of two arms and hands of the person. 
+	<br>
+    LA WAH: <input type="text" name="porkQty" size="2" value="0" onmouseover= "porkImage()" onmouseout= "document.getElementById('mainpic').src='images/Therapy.png'">
+	<br>
+	<p align=center>Please enter the level arm of weight . 
+	<br>
+	LA WL: <input type="text" name="porkQty" size="2" value="0" onmouseover= "porkImage()" onmouseout= "document.getElementById('mainpic').src='images/Therapy.png'">
+	<br>
+	<p align=center>Please enter the level arm of erector spinae muscle. 
+	<br>
+	LA ES: <input type="text" name="porkQty" size="2" value="0" onmouseover= "porkImage()" onmouseout= "document.getElementById('mainpic').src='images/Therapy.png'">
+	<br>
+	<p align=center>Please enter the weight of person. 
+    <br>
+	weight of person: <input type="text" name="porkQty" size="2" value="0" onmouseover= "porkImage()" onmouseout= "document.getElementById('mainpic').src='images/Therapy.png'">
+	<br>
+	<p align=center>Please enter the weight of ball. 
+    <br>	
+	WL: <input type="text" name="porkQty" size="2" value="0" onmouseover= "porkImage()" onmouseout= "document.getElementById('mainpic').src='images/Therapy.png'">
+	
+	<br>
+	<input type="button" name="calcBtn" value="Check!" onclick="billme(document.order)" />
+	<input type="reset" name="resetBtn" value="Clear Form" />
+	<br>
+	<br>
+	W TNH: <input type="text" name="subtotalBox" size="6" value="0" /><br>
+	<br>
+	W AH: <input type="text" name="subtotalBox" size="6" value="0" /><br>
+
+	<div><center>Reference: 
+https://biomechanics.byu.edu/exsc362(hunter)/chapter06.html</center></div>
+
+
+	</p>
+	<br>
+	<script> 		window.alert('Have Fun!');
+
+	</script>
+	
+
+	<script src="scripts\base.js"></script>
+	
+	</body>
+	</html>
